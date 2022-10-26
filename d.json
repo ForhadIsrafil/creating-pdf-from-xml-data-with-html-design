@@ -1,0 +1,310 @@
+{
+  "VDoc": {
+    "@PlatformName": "EESC336",
+    "@PlatformSerialNumber": "520SLD511902",
+    "@SoftwareBundleNumber": "21.4.0",
+    "@SoftwareBuildNumber": "2.6.0.938 US",
+    "@VATDatabaseName": "CH2V10GB.VAT",
+    "@DateCreated": "09/29/2022  06:48AM",
+    "@VehicleIdentificationNumber": "1GNSKDKD8NR205831",
+    "@Odometer": "12634 mi",
+    "@LicensePlateNumber": "ana",
+    "@VehicleSystemReport": "Enabled",
+    "VDocSection": {
+      "@Name": "COMPONENTDATA",
+      "DataItems": [
+        {
+          "@componentName": "Scanner",
+          "@attributeName": "ActionSelection",
+          "Item": [
+            {
+              "@name": "MAKE",
+              "@value": "Chevrolet"
+            },
+            {
+              "@name": "YEAR",
+              "@value": "2021"
+            },
+            {
+              "@name": "MODEL",
+              "@value": "Suburban (4WD)"
+            },
+            {
+              "@name": "ENGINE",
+              "@value": "3.0L L6 (LM2)"
+            },
+            {
+              "@name": "SYSTEM",
+              "@value": "CodeScan"
+            },
+            {
+              "@name": "BEN",
+              "@value": ""
+            }
+          ]
+        },
+        {
+          "@componentName": "Scanner",
+          "@attributeName": "CodeScan",
+          "Item": [
+            {
+              "@name": "TitleBar",
+              "@value": "2021 Chevrolet Suburban (4WD) 3.0L L6 (LM2) "
+            },
+            {
+              "@name": "InfoBar",
+              "@value": "Code Scan Results"
+            }
+          ]
+        },
+        {
+          "@componentName": "Scanner",
+          "@attributeName": "CodeScan",
+          "CodeScanType": {
+            "@name": "PreScan",
+            "@value": "Pre Scan"
+          },
+          "CodeScanSystems": {
+            "@name": "Systems detected",
+            "@value": "29",
+            "System": [
+              {
+                "@name": "Engine",
+                "@type": "",
+                "@value": "1",
+                "Item": {
+                  "@name": "P059F",
+                  "@value": "Active Grille Air Shutter Performance Invalid Configuration - \n   History DTC\n   Test Not Complete for this DTC this Operating Cycle\n   Last Test Passed\n   Passed and Failed Since DTC Clear\n   MIL Not Requested"
+                }
+              },
+              {
+                "@name": "Transmission",
+                "@type": "",
+                "@value": "0"
+              },
+              {
+                "@name": "Antilock Brakes",
+                "@type": "",
+                "@value": "0"
+              },
+              {
+                "@name": "Airbag",
+                "@type": "",
+                "@value": "0"
+              },
+              {
+                "@name": "Amplifier",
+                "@type": "",
+                "@value": "0"
+              },
+              {
+                "@name": "Automatic Level Control",
+                "@type": "",
+                "@value": "0"
+              },
+              {
+                "@name": "Body Control Module",
+                "@type": "",
+                "@value": "4",
+                "Item": [
+                  {
+                    "@name": "B2A72",
+                    "@value": "Heater and Air Conditioning User Interface Control - Front: Rear Power Switch Signal Circuit Performance Invalid Configuration - \n   History DTC\n   Not Failed This Operating Cycle\n   Last Test Passed\n   Passed and Failed Since DTC Clear\n   MIL Not Requested"
+                  },
+                  {
+                    "@name": "U0229",
+                    "@value": "Lost Communication with Steering Wheel Heat Control Module Invalid Configuration - \n   Current DTC\n   Failed This Operating Cycle\n   Last Test Failed\n   Failed Since DTC Clear\n   MIL Not Requested"
+                  },
+                  {
+                    "@name": "U152B",
+                    "@value": "Body Control Module LIN Bus 7 Invalid Configuration - \n   History DTC\n   Not Failed This Operating Cycle\n   Last Test Passed\n   Passed and Failed Since DTC Clear\n   MIL Not Requested"
+                  },
+                  {
+                    "@name": "U1530",
+                    "@value": "Body Control Module LIN Bus 12 Invalid Configuration - \n   Current DTC\n   Failed This Operating Cycle\n   Last Test Failed\n   Failed Since DTC Clear\n   MIL Not Requested"
+                  }
+                ]
+              },
+              {
+                "@name": "Camera System",
+                "@type": "Front View",
+                "@value": "0"
+              },
+              {
+                "@name": "Chassis Control Module",
+                "@type": "Auxiliary",
+                "@value": "0"
+              },
+              {
+                "@name": "Differential Control Module",
+                "@type": "",
+                "@value": "0"
+              },
+              {
+                "@name": "Electric Power Steering Control Module",
+                "@type": "",
+                "@value": "0"
+              },
+              {
+                "@name": "HVAC Auxiliary Control",
+                "@type": "",
+                "@value": "0"
+              },
+              {
+                "@name": "HVAC Controls",
+                "@type": "",
+                "@value": "0"
+              },
+              {
+                "@name": "Instrument Panel Cluster",
+                "@type": "",
+                "@value": "0"
+              },
+              {
+                "@name": "Occupant Classification System Module",
+                "@type": "",
+                "@value": "0"
+              },
+              {
+                "@name": "Lighting Control Module",
+                "@type": "",
+                "@value": "0"
+              },
+              {
+                "@name": "Radio",
+                "@type": "",
+                "@value": "0"
+              },
+              {
+                "@name": "Rear Gate Module",
+                "@type": "",
+                "@value": "0"
+              },
+              {
+                "@name": "Seat Adjuster Memory Module",
+                "@type": "Driver",
+                "@value": "0"
+              },
+              {
+                "@name": "Serial Data Gateway Module",
+                "@type": "",
+                "@value": "0"
+              },
+              {
+                "@name": "Side Object Detection Module",
+                "@type": "Left",
+                "@value": "0"
+              },
+              {
+                "@name": "Side Object Detection Module",
+                "@type": "Right",
+                "@value": "0"
+              },
+              {
+                "@name": "Suspension Control Module",
+                "@type": "",
+                "@value": "0"
+              },
+              {
+                "@name": "Telematics Communication Interface",
+                "@type": "",
+                "@value": "0"
+              },
+              {
+                "@name": "Tire Pressure Monitor",
+                "@type": "",
+                "@value": "4",
+                "Item": [
+                  {
+                    "@name": "B2A72",
+                    "@value": "Heater and Air Conditioning User Interface Control - Front: Rear Power Switch Signal Circuit Performance Invalid Configuration - \n   History DTC\n   Not Failed This Operating Cycle\n   Last Test Passed\n   Passed and Failed Since DTC Clear\n   MIL Not Requested"
+                  },
+                  {
+                    "@name": "U0229",
+                    "@value": "Lost Communication with Steering Wheel Heat Control Module Invalid Configuration - \n   Current DTC\n   Failed This Operating Cycle\n   Last Test Failed\n   Failed Since DTC Clear\n   MIL Not Requested"
+                  },
+                  {
+                    "@name": "U152B",
+                    "@value": "Body Control Module LIN Bus 7 Invalid Configuration - \n   History DTC\n   Not Failed This Operating Cycle\n   Last Test Passed\n   Passed and Failed Since DTC Clear\n   MIL Not Requested"
+                  },
+                  {
+                    "@name": "U1530",
+                    "@value": "Body Control Module LIN Bus 12 Invalid Configuration - \n   Current DTC\n   Failed This Operating Cycle\n   Last Test Failed\n   Failed Since DTC Clear\n   MIL Not Requested"
+                  }
+                ]
+              },
+              {
+                "@name": "Trailer Lamp Control Module",
+                "@type": "",
+                "@value": "0"
+              },
+              {
+                "@name": "Transfer Case",
+                "@type": "",
+                "@value": "1",
+                "Item": {
+                  "@name": "U0131",
+                  "@value": "Lost Communication with Power Steering Module Invalid Configuration - \n   Failed Since DTC Cleared\n   Not Failed This Operating Cycle\n   Last Test Passed\n   Passed and Failed Since DTC Clear\n   MIL Not Requested"
+                }
+              },
+              {
+                "@name": "Video Processing Module",
+                "@type": "",
+                "@value": "0"
+              },
+              {
+                "@name": "Wireless Accessory Charging Module",
+                "@type": "",
+                "@value": "0"
+              },
+              {
+                "@name": "OBDII Codes ($03)",
+                "@type": "",
+                "@value": "1",
+                "Item": {
+                  "@name": "P059F",
+                  "@value": "Active Grille Air Shutter \"A\" Performance/Stuck Off"
+                }
+              },
+              {
+                "@name": "OBDII Permanent Codes ($0A)",
+                "@type": "",
+                "@value": "0"
+              }
+            ]
+          },
+          "ReadinessMonitorsTestsComplete": {
+            "@name": "Readiness Monitors",
+            "@value": "Tests Complete",
+            "Item": [
+              {
+                "@name": "Misfire"
+              },
+              {
+                "@name": "Fuel System"
+              },
+              {
+                "@name": "Comprehensive Component"
+              },
+              {
+                "@name": "EGR/VVT"
+              },
+              {
+                "@name": "Catalyst"
+              },
+              {
+                "@name": "Evaporative System"
+              },
+              {
+                "@name": "Oxygen Sensor"
+              },
+              {
+                "@name": "Oxygen Sensor Heater"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

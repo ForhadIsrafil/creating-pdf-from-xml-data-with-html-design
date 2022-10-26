@@ -5,7 +5,10 @@ __pycache__/
 
 # C extensions
 *.so
-
+*.pdf
+*.xml
+*.XML
+html_files
 # Distribution / packaging
 .Python
 build/
