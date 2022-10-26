@@ -9,6 +9,7 @@ __pycache__/
 *.xml
 *.XML
 html_files
+html_files/*.html
 # Distribution / packaging
 .Python
 build/
