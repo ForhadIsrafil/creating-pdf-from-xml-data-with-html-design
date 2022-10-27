@@ -36,6 +36,7 @@ if __name__ == "__main__":
         os.mkdir("PDF_Files")
     except Exception as e:
         pass
+
     try:
         os.mkdir("html_files")
     except Exception as e:
