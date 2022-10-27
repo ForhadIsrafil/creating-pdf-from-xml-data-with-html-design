@@ -16,7 +16,7 @@ A python project for creating PDF files with #jinja2 and #xhtml2pdf
 
 ### Install the dependencies/packages:
 - On Windows 10 or 11: ``pip install -r requirements.txt``
-- On Mac: ``pip3 install -r requirements.txt``
+- On Mac/Unix: ``pip3 install -r requirements.txt``
 
 ### Run the script on Windows 10 or 11
 
