@@ -2,7 +2,7 @@ A python project for creating PDF files with #jinja2 and #xhtml2pdf
 
 ## [Warning!]()
 
-- Stores all new xml files in the "all_xml_files"
+- Store all new xml files in the "all_xml_files"
 - Don't Delete "all_xml_files" folder
 - Don't Delete bg.png file/not needed
 - Don't Delete pdf_report.html file
@@ -14,7 +14,7 @@ A python project for creating PDF files with #jinja2 and #xhtml2pdf
 
 
 
-### Install the dependencies:
+### Install the dependencies/packages:
 - On Windows 10 or 11: ``pip install -r requirements.txt``
 - On Mac: ``pip3 install -r requirements.txt``
 
