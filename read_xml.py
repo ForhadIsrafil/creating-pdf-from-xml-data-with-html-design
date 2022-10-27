@@ -11,6 +11,7 @@ def get_xml_data(xml_file_path):
     #     d.write(json.dumps(xml_att))
     body_control = []
     tire_pressure = []
+    readiness = []
 
     for data in xml_att['VDoc']['VDocSection']['DataItems']:
         if data['@attributeName'] == "ActionSelection":
@@ -47,6 +48,8 @@ def get_xml_data(xml_file_path):
         if "ReadinessMonitorsTestsComplete" in data:
             # print(data['ReadinessMonitorsTestsComplete'])
             readiness = data['ReadinessMonitorsTestsComplete']['Item']
+            if isinstance(readiness, dict):
+                readiness = [data['ReadinessMonitorsTestsComplete']]
         if "CodeScanType" in data:
             code_scan_type = data['CodeScanType']['@value']
 
