@@ -56,6 +56,18 @@ if __name__ == "__main__":
         vehicle_infos, CodeScanSystems, body_controls, tire_pressures, readinesses, code_scan_type, top_information = get_xml_data(
             xml_file_path)
 
+        systems = []
+
+        for system in CodeScanSystems['System']:
+            if system['@value'] != '0' and isinstance(system['Item'], dict):
+                system['Item'] = [system['Item']]
+                systems.append(system)
+            elif system['@value'] != '0' and isinstance(system['Item'], list):
+                systems.append(system)
+
+            # else:
+            #     systems.append(system)
+
         output_text = template.render(
             vehicle_infos=vehicle_infos,
             CodeScanSystems=CodeScanSystems,
@@ -64,6 +76,7 @@ if __name__ == "__main__":
             readinesses=readinesses,
             code_scan_type=code_scan_type,
             top_information=top_information,
+            systems=systems,
         )
 
         with open("html_files/" + output_filename + ".html", 'w') as html_file:

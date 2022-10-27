@@ -274,40 +274,6 @@
         {% endif %}
         {% endfor %}
 
-        <!-- <li data-list-text="•">
-            <p style="padding-left: 35pt;text-indent: -24pt;text-align: left;">Engine</p>
-        </li>
-        <li data-list-text="•">
-            <p style="padding-left: 35pt;text-indent: -24pt;text-align: left;">Transmission</p>
-        </li>
-        <li data-list-text="•">
-            <p style="padding-left: 35pt;text-indent: -24pt;text-align: left;">HVAC</p>
-        </li>
-        <li data-list-text="•">
-            <p style="padding-left: 35pt;text-indent: -24pt;text-align: left;">Body Control Module</p>
-        </li>
-        <li data-list-text="•">
-            <p style="padding-left: 35pt;text-indent: -24pt;text-align: left;">Electronic Power Steering</p>
-        </li>
-        <li data-list-text="•">
-            <p style="padding-left: 35pt;text-indent: -24pt;text-align: left;">Intelligent Power Distribution Module
-            </p>
-        </li>
-        <li data-list-text="•">
-            <p style="padding-left: 35pt;text-indent: -24pt;text-align: left;">Meter</p>
-        </li>
-        <li data-list-text="•">
-            <p style="padding-left: 35pt;text-indent: -24pt;text-align: left;">Tire Pressure Monitor</p>
-        </li>
-        <li data-list-text="•">
-            <p style="padding-left: 35pt;text-indent: -24pt;text-align: left;">CAN Gateway - 3 Channel</p>
-        </li>
-        <li data-list-text="•">
-            <p style="padding-left: 35pt;text-indent: -24pt;text-align: left;">OBDII Codes ($03)</p>
-        </li>
-        <li data-list-text="•">
-            <p style="padding-left: 35pt;text-indent: -24pt;text-align: left;">OBDII Permanent Codes ($0A)</p>
-        </li>-->
     </ul>
     <!-- ================================================ -->
 
@@ -375,24 +341,30 @@
         {% endfor %}
     </div>
     <br>
-    {% if body_controls %}
-    <div>
-        <p class="s1" style="color: black">Body Control Module</p>
-        {% for body_control in body_controls %}
-        <p style="">{{body_control['@name']}} | {{body_control['@value']}}</p>
-        {% endfor %}
-    </div>
-    {% endif %}
+    <!--    {% if body_controls %}-->
+    <!--    <div>-->
+    <!--        <p class="s1" style="color: black">Body Control Module</p>-->
+    <!--        {% for body_control in body_controls %}-->
+    <!--        <p style="">{{body_control['@name']}} | {{body_control['@value']}}</p>-->
+    <!--        {% endfor %}-->
+    <!--    </div>-->
+    <!--    {% endif %}-->
 
-    {% if tire_pressures %}
-    <br>
-    <div>
-        <p class="s1" style="color: black">Tire Pressure Monitor</p>
-        {% for tire_pressure in tire_pressures %}
-        <p style="">{{tire_pressure['@name']}} | {{tire_pressure['@value']}}</p>
-        {% endfor %}
-    </div>
-    {% endif %}
+    <!--    {% if tire_pressures %}-->
+    <!--    <br>-->
+    <!--    <div>-->
+    <!--        <p class="s1" style="color: black">Tire Pressure Monitor</p>-->
+    <!--        {% for tire_pressure in tire_pressures %}-->
+    <!--        <p style="">{{tire_pressure['@name']}} | {{tire_pressure['@value']}}</p>-->
+    <!--        {% endfor %}-->
+    <!--    </div>-->
+    <!--    {% endif %}-->
+    {% for system in systems %}
+    <p class="s1" style="color: black">{{system['@name']}}</p>
+    {% for item in system['Item'] %}
+    <p style="">{{ item['@name'] }} | {{ item['@value'] }}</p>
+    {% endfor %}
+    {% endfor %}
 
     <br>
     <p class="s1">READINESS MONITORS</p>
@@ -403,6 +375,8 @@
             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACK0lEQVQ4ja3Tz2tUVxjG8c87d3SGGSIFYweDKIWgFCKhbvwTArZu7MJ0Y3dVKEI2QnTXTQ1kobiRrkTNIq5tC1l2UcSNEGqR0iBtqQmDUcQ4ISmdvl3cO+Ns3HkW5xfnPuf7vM+5vIcWcHhm0vjxzuheBzOYxhi2sIqVD5vj3c+PfJaDw4uLi+owfrzjo1NHCS3MYp6cQDNFEfRl7mTE+pH2oYVPp04vH2js367X6paWltRGmFoyr+AGJol2ilogUyG0MflX7+8bFx9evvJ890UrswSqDSWYFTGH9sBmDMayzyDRwtx3v92Z3f3vnxgV6Ujz5YGh3Rx25dAlvyffJK3Hr57M31671xkVmREmpJBRfZUVTSY2yTniIvFnZEZmTvSzPzMqMo1mZSyxFaJPJtHFBeInfIOjhAjN3r+96d3+7lBkLCnKCljDHPkzsVHOPcBV6QvsLfGieLj5aN/a1h9lxOXN2a/ibJO/pvgqUkf4HddwRtgzKFDQPzl+4vWzsSdDklUZO2X18yBxM9I+rKW8ijMy66W9rIBzp11vrzaKxpBkBevV+whMC3fxKsQn2FPl7C1JrBdRrIwWtissYLta18hjOIm9g7gGgQfbUx98vPDl5NnuqEhiGdelXrXOt0+mvJpI9HD9/LFzy82ikRjaUVF8KzzFPDEhNFEk/WAH64fbhxYuTX29fKCxf0Bdimz+0h0VuoUfveMv7jVfdn9YvT9k3NjY8F7a/zBezDQlQOtXAAAAAElFTkSuQmCC"/>
         &nbsp;&nbsp; {{readiness['@name']}}</p>
     {% endfor %}
+
+
 </div>
 </body>
 </html>
