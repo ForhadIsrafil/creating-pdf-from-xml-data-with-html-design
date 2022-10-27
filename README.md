@@ -22,6 +22,6 @@ A python project for creating PDF files with #jinja2 and #xhtml2pdf
 
 - ``python xml_data_to_pdf.py``
 
-### Run the script on Mac
+### Run the script on Mac/Unix
 
 - ``python3 xml_data_to_pdf.py``
