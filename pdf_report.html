@@ -129,6 +129,11 @@
     <p style="padding-left: 5pt;text-indent: 0pt;text-align: left;">{{vehicle_info["@value"]}}</p>
     {% endif %}
 
+    {% if vehicle_info["@name"] == 'LICENSE PLATE' %}
+    <p class="s1" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">License Plate</p>
+    <p style="padding-left: 5pt;text-indent: 0pt;text-align: left;">{{vehicle_info["@value"]}}</p>
+    {% endif %}
+
     {% if vehicle_info["@name"] == 'LicensePlateNumber' %}
     <p class="s1" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">License Plate</p>
     <p style="padding-left: 5pt;text-indent: 0pt;text-align: left;">{{vehicle_info["@value"]}}</p>
