@@ -1,3 +1,5 @@
+from datetime import datetime
+
 import jinja2
 from xhtml2pdf import pisa
 from read_xml import get_xml_data
@@ -11,20 +13,27 @@ import time
 
 # Utility function
 def convert_html_to_pdf(source_html, output_filename):
-    # open output file for writing (truncated binary)
-    result_file = open(output_filename, "w+b")
+    try:
+        source_html_path = open(source_html, "r+b")
 
-    # convert HTML to PDF
-    pisa_status = pisa.CreatePDF(
-        src=source_html,  # the HTML to convert
-        dest=result_file,  # file handle to recieve result
-    )
+        # open output file for writing (truncated binary)
+        result_file = open(output_filename, "w+b")
 
-    # close output file
-    result_file.close()  # close output file
+        # convert HTML to PDF
+        pisa_status = pisa.CreatePDF(
+            src=source_html_path,  # the HTML to convert
+            dest=result_file,  # file handle to recieve result
+        )
 
-    # return False on success and True on errors
-    return pisa_status.err
+        # close output file
+        result_file.close()  # close output file
+        # close source file path
+        source_html_path.close()
+
+        # return False on success and True on errors
+        return pisa_status.err
+    except Exception as e:
+        print(e)
 
 
 # ===================================
@@ -48,6 +57,7 @@ if __name__ == "__main__":
     TEMPLATE_FILE = "pdf_report.html"
     template = templateEnv.get_template(TEMPLATE_FILE)
 
+    index = 1
     # todo: specify the folder of xml files
     xmls = glob("all_xml_files/*.XML")
     for xml_file_path in xmls:
@@ -89,12 +99,15 @@ if __name__ == "__main__":
 
         for vehicle in vehicle_infos:
             if vehicle["@name"] == 'VIN':
-                pdf_name = vehicle["@value"][-8:] + '_' + code_scan_type
+                pdf_name = vehicle["@value"] + '_' + code_scan_type
 
-        source_html = open("html_files/" + output_filename + ".html", "r+b")
-        output_filename = "PDF_Files/" + pdf_name + ".pdf"
+        source_html_path = "html_files/" + output_filename + ".html"
+        output_filename_path = "PDF_Files/" + pdf_name + " " + str(index) + ".pdf"
 
-        convert_html_to_pdf(source_html, output_filename)
+        index += 1
+
+        convert_html_to_pdf(source_html_path, output_filename_path)
+        # time.sleep(1)
 
     # ====================== pdf ========================
 

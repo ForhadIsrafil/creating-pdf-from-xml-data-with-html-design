@@ -5,7 +5,7 @@ import json
 def get_xml_data(xml_file_path):
     file = open(xml_file_path)
     xml_att = xmltodict.parse(file.read())
-    print(xml_file_path, )
+    print(xml_file_path)
 
     # with open("d.json", 'w') as d:
     #     d.write(json.dumps(xml_att))
@@ -64,4 +64,5 @@ def get_xml_data(xml_file_path):
         if vehicle["@name"] == 'ENGINE':
             top_information['engine'] = vehicle
 
+    file.close()
     return vehicle_info, CodeScanSystems, body_control, tire_pressure, readiness, code_scan_type, top_information
