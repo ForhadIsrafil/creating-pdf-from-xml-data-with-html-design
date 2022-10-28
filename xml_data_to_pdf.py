@@ -72,7 +72,7 @@ if __name__ == "__main__":
             vehicle_infos=vehicle_infos,
             CodeScanSystems=CodeScanSystems,
             body_controls=body_controls,
-            tire_pressures=tire_pressures,
+            # tire_pressures=tire_pressures,
             readinesses=readinesses,
             code_scan_type=code_scan_type,
             top_information=top_information,
