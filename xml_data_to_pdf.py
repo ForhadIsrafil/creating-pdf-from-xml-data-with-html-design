@@ -99,7 +99,8 @@ if __name__ == "__main__":
 
         for vehicle in vehicle_infos:
             if vehicle["@name"] == 'VIN':
-                pdf_name = vehicle["@value"] + '_' + code_scan_type
+                pdf_name = vehicle["@value"][-8:] + ' ' + code_scan_type
+                break
 
         source_html_path = "html_files/" + output_filename + ".html"
         output_filename_path = "PDF_Files/" + pdf_name + " " + str(index) + ".pdf"
@@ -108,6 +109,7 @@ if __name__ == "__main__":
 
         convert_html_to_pdf(source_html_path, output_filename_path)
         # time.sleep(1)
+        break
 
     # ====================== pdf ========================
 
