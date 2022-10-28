@@ -65,8 +65,11 @@ if __name__ == "__main__":
             elif system['@value'] != '0' and isinstance(system['Item'], list):
                 systems.append(system)
 
-            # else:
-            #     systems.append(system)
+        is_attention = False
+        for system in CodeScanSystems['System']:
+            if system['@value'] != '0':
+                is_attention = True
+                break
 
         output_text = template.render(
             vehicle_infos=vehicle_infos,
@@ -77,6 +80,7 @@ if __name__ == "__main__":
             code_scan_type=code_scan_type,
             top_information=top_information,
             systems=systems,
+            is_attention=is_attention,
         )
 
         with open("html_files/" + output_filename + ".html", 'w') as html_file:

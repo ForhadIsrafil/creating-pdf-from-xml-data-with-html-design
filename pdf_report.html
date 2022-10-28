@@ -202,25 +202,26 @@
         <span style="color: #FFFFFF">DIAGNOSTIC HEALTH SCAN</span>
     </h4>
 
+    {% if is_attention %}
+    <table border="0" cellspacing="0" cellpadding="0" style="padding-bottom: 5pt;">
+        <tr>
+            <td><img width="26" height="26"
+                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAADUUlEQVRIia1WTWhUVxg95753Z6KmTeYnb7A2bWyjoAYRLe0quJIWoQ0UFSpFSv6Km+DK4EJxERVdpA2UtpnUiKILoeanKV0JLtRNQulCtKLdiNLSpIsiCMb8fC7uffe9+clkRrybN/Pu/b7znXPP980ANaxNb3l8Phb88c+lpl/IWiJrXPPjwdXFyZwsTuZkejB9oJZYVe3B9q2ansJ+QAAAO9/3L9bCqmqgG2fSFwESMNkFrPv9m3TnawX67KMkRfAlIJYPAIFs36h/VFWyqgro2rGGPCkU0CBAQIIC0X+NZLteC9DHOxM+yS4A8nh26fPWnv/03UdLXxtmRHOTyq9Nrg60KvHnY0HeV+wWCnTHrAIARWB+IrdMgALB02fSlTk4N/rKjD7Y5Cd8j90gCgy2LAAhgAAUSsNaNZKqr+zBikA3TqfzsKxFincJoQAEQaiH+ezhVwJqyanEmgQPRXlLCyYIQ0zQuE4NZd7givlW3LjzXfYSrEImaeGS8EEDKIA/PZg5WhPQu4HSdQkeAESEsbSlSBbfHHsn8Abq68qzKvvy/g/ZK0aSUK9yskmIJzFA7+bZ1KmqgHa85yvtcR9pghmfBgVIpnnNTKJlRbS16H7fK62sBGhmMH0ZFJpAAWDMVbpCImZSGEzjxdvn0t9WBPpkVwIgv4hKpnmW6RBxL42/QTrb7GrVfRWBpk6kRhmTPC6aSHRTb2eUiq7ILTp2AO59nxkqC/Tph0kF4KuwUrERYSZSOD8e/Nq+Tace5rO37FA1dcW9br9u3uD3aT/Swn14MR4MK8XeQnkgDA1Gw9S6DIy2JHSDPeU25p4uD60/NHfEMdrdpjUVe4pkFYpJD4pYVf6eebBwnMCjWKXRZRkkF9P0Jvt2t2nfbT77OfgpqdllJDPdY+o3BYodNrrjXxVKuTiZeyGAjvtEIMUxmF+Q8+v2zXarLc1eIqnZ6VqdtBB0Bbv2L2S8XGxG13pRDJKanVuavaS6PpAaLlTAXULRdUFNnWjsJ8Gr/Q29AJJSEFCynI+uD6QucGEieEJyQ9R+URsy+oWgs71zvzWl2DEV3yqKEZHH3LMj0fjbycY/SfrmhICk1cn+SyBB20iuEEfbFkSUjRFgce/J/1tfArIjMw9BcoAvAAAAAElFTkSuQmCC"/>
+                <p style="">Needs Attention</p>
+            </td>
+        </tr>
+    </table>
 
-<!--    <table border="0" cellspacing="0" cellpadding="0" style="padding-bottom: 5pt;">-->
-    <!--        <tr>-->
-    <!--            <td><img width="26" height="26"-->
-    <!--                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAADUUlEQVRIia1WTWhUVxg95753Z6KmTeYnb7A2bWyjoAYRLe0quJIWoQ0UFSpFSv6Km+DK4EJxERVdpA2UtpnUiKILoeanKV0JLtRNQulCtKLdiNLSpIsiCMb8fC7uffe9+clkRrybN/Pu/b7znXPP980ANaxNb3l8Phb88c+lpl/IWiJrXPPjwdXFyZwsTuZkejB9oJZYVe3B9q2ansJ+QAAAO9/3L9bCqmqgG2fSFwESMNkFrPv9m3TnawX67KMkRfAlIJYPAIFs36h/VFWyqgro2rGGPCkU0CBAQIIC0X+NZLteC9DHOxM+yS4A8nh26fPWnv/03UdLXxtmRHOTyq9Nrg60KvHnY0HeV+wWCnTHrAIARWB+IrdMgALB02fSlTk4N/rKjD7Y5Cd8j90gCgy2LAAhgAAUSsNaNZKqr+zBikA3TqfzsKxFincJoQAEQaiH+ezhVwJqyanEmgQPRXlLCyYIQ0zQuE4NZd7givlW3LjzXfYSrEImaeGS8EEDKIA/PZg5WhPQu4HSdQkeAESEsbSlSBbfHHsn8Abq68qzKvvy/g/ZK0aSUK9yskmIJzFA7+bZ1KmqgHa85yvtcR9pghmfBgVIpnnNTKJlRbS16H7fK62sBGhmMH0ZFJpAAWDMVbpCImZSGEzjxdvn0t9WBPpkVwIgv4hKpnmW6RBxL42/QTrb7GrVfRWBpk6kRhmTPC6aSHRTb2eUiq7ILTp2AO59nxkqC/Tph0kF4KuwUrERYSZSOD8e/Nq+Tace5rO37FA1dcW9br9u3uD3aT/Swn14MR4MK8XeQnkgDA1Gw9S6DIy2JHSDPeU25p4uD60/NHfEMdrdpjUVe4pkFYpJD4pYVf6eebBwnMCjWKXRZRkkF9P0Jvt2t2nfbT77OfgpqdllJDPdY+o3BYodNrrjXxVKuTiZeyGAjvtEIMUxmF+Q8+v2zXarLc1eIqnZ6VqdtBB0Bbv2L2S8XGxG13pRDJKanVuavaS6PpAaLlTAXULRdUFNnWjsJ8Gr/Q29AJJSEFCynI+uD6QucGEieEJyQ9R+URsy+oWgs71zvzWl2DEV3yqKEZHH3LMj0fjbycY/SfrmhICk1cn+SyBB20iuEEfbFkSUjRFgce/J/1tfArIjMw9BcoAvAAAAAElFTkSuQmCC"/>-->
-    <!--                <p style="">Needs Attention</p>-->
-    <!--            </td>-->
-    <!--        </tr>-->
-    <!--    </table>-->
-
-    <!--    <ul style="padding-left: 245pt;">-->
-    <!--        {% for system in CodeScanSystems['System'] %}-->
-    <!--        {% if system['@value'] != '0' %}-->
-    <!--        <li data-list-text="•">-->
-    <!--            <p style="padding-left: 35pt;text-indent: -24pt;text-align: left;">- {{ system['@name'] }}</p>-->
-    <!--        </li>-->
-    <!--        {% endif %}-->
-    <!--        {% endfor %}-->
-    <!--    </ul>-->
+    <ul style="padding-left: 245pt;">
+        {% for system in CodeScanSystems['System'] %}
+        {% if system['@value'] != '0' %}
+        <li data-list-text="•">
+            <p style="padding-left: 35pt;text-indent: -24pt;text-align: left;">- {{ system['@name'] }}</p>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    {% endif %}
 
     <table border="0" cellspacing="0" cellpadding="0" style="padding-bottom: 5pt;">
         <tr>
