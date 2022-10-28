@@ -109,7 +109,6 @@ if __name__ == "__main__":
 
         convert_html_to_pdf(source_html_path, output_filename_path)
         # time.sleep(1)
-        break
 
     # ====================== pdf ========================
 
